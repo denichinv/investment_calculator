@@ -1,11 +1,15 @@
+import Header from './components/Header'
 
-import './App.css'
+import image from './assets/SEO-Cost-Calculator-1.png';
+
 
 function App() {
 
 
   return (
     <>
+    <Header logo={image}/>
+
 
     </>
   )
