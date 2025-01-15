@@ -45,3 +45,9 @@
     margin-right: 0.5rem;
     font-weight: bold;
 }
+.currency-switcher select {
+    padding: 8px;
+    font-weight: bold;
+
+}
+
