@@ -16,6 +16,15 @@ const UserInput = () => {
         duration: "",
     });
 
+    const [currency, setCurrency] = useState("USD");
+
+    const currencyRates = {
+        USD: 1,      
+        EUR: 0.91,    
+        GBP: 0.78,    
+    };
+
+
     function handleChange(id, newValue) {
         setUserInput((prev) => ({
             ...prev,
@@ -35,6 +44,17 @@ const UserInput = () => {
             }));
         }
     }
+    function handleCurrencyChange(newCurrency) {
+        const conversionRate = currencyRates[newCurrency] / currencyRates[currency]
+        setCurrency(newCurrency)
+        setUserInput((prevInput) => ({
+            initialInvestment: prevInput.initialInvestment * conversionRate,
+            annualInvestment: prevInput.annualInvestment * conversionRate,
+            expectedReturn: prevInput.expectedReturn,
+            duration: prevInput.duration,
+        }));
+
+    }
 
     const isValid = Object.values(error).every((err) => err === "") && 
                     Object.values(userInput).every((value) => value > 0);
@@ -44,8 +64,16 @@ const UserInput = () => {
     return (
         <section id="user-input">
             <div>
+                <div className='currency-switcher' >
+                    <label>Currency:</label>
+                    <select  value={currency} onChange={(e) => handleCurrencyChange(e.target.value)}>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </div>
                 <p className="input-group">
-                    <label>Beginning Investment</label>
+                    <label>Beginning Investment ({currency})</label>
                     <input
                         type="number"
                         value={userInput.initialInvestment}
@@ -58,7 +86,7 @@ const UserInput = () => {
                 </p>
 
                 <p className="input-group">
-                    <label>Annual Investment</label>
+                    <label>Annual Investment ({currency})</label>
                     <input
                         type="number"
                         value={userInput.annualInvestment}
@@ -71,7 +99,7 @@ const UserInput = () => {
                 </p>
 
                 <p className="input-group">
-                    <label>Return We Expect</label>
+                    <label>Return We Expect (%)</label>
                     <input
                         type="number"
                         value={userInput.expectedReturn}
