@@ -26,3 +26,14 @@
     border-radius: 4px;
     font-size: 1rem;
   }
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+  .validation-error {
+    color: red;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
