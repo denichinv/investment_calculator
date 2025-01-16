@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import Header from './components/Header'
 import UserInput from './components/UserInput';
 import React, { useState } from 'react';
-
+import OutputData from './components/OutputData';
 
 import image from './assets/SEO-Cost-Calculator-1.png';
 
@@ -67,7 +68,7 @@ function App() {
     <>
     <Header logo={image}/>
     <UserInput userInput={userInput} error={error} currency={currency} handleChange={handleChange} handleCurrencyChange={handleCurrencyChange} isValid={isValid}/>
-
+    <OutputData userInput={userInput} currency={currency}/>
 
     </>
   )
