@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { calculateInvestment } from '../util/calculateInvestment'
-
+import "./outputData.css"
 
 const OutputData = ({userInput, currency}) => {
     const resdata = calculateInvestment(userInput)

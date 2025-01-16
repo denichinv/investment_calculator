@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  
+  .calculator-container {
+    display: flex;
+    gap: 0rem;
+    justify-content: center;
+    margin-top: 5rem;
+  }
