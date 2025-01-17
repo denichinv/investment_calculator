@@ -23,7 +23,7 @@ const UserInput = ({userInput,error,currency,handleChange,handleCurrencyChange, 
                     </select>
                 </div>
                 <p className="input-group">
-                    <label>Beginning Investment ({currency})</label>
+                    <label>Your Initial Investment ({currency})</label>
                     <input
                         type="number"
                         value={userInput.initialInvestment}
@@ -36,7 +36,7 @@ const UserInput = ({userInput,error,currency,handleChange,handleCurrencyChange, 
                 </p>
 
                 <p className="input-group">
-                    <label>Annual Investment ({currency})</label>
+                    <label> Your Annual Investment ({currency})</label>
                     <input
                         type="number"
                         value={userInput.annualInvestment}
@@ -49,7 +49,7 @@ const UserInput = ({userInput,error,currency,handleChange,handleCurrencyChange, 
                 </p>
 
                 <p className="input-group">
-                    <label>Return We Expect (%)</label>
+                    <label>Interest Rate (%)</label>
                     <input
                         type="number"
                         value={userInput.expectedReturn}
@@ -62,7 +62,7 @@ const UserInput = ({userInput,error,currency,handleChange,handleCurrencyChange, 
                 </p>
 
                 <p className="input-group">
-                    <label>Yearly Investment</label>
+                    <label>Years of growth</label>
                     <input
                         type="number"
                         value={userInput.duration}

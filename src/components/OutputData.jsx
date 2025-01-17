@@ -26,20 +26,20 @@ const OutputData = ({userInput, currency}) => {
       <thead>
         <tr>
             <th>Year</th>
-            <th>Investment Value</th>
+            <th>Potential Future Balance</th>
             <th>Interest (Year)</th>
             <th>Total Interest</th>
-            <th>Invested Capital</th>
+            <th>Initial deposit</th>
         </tr>
       </thead>
       <tbody>
         {resdata.map((yearData,index) => (
         <tr key={index}>
         <td>{yearData.year}</td>
-        <td>{yearData.investmentValue.toFixed(2)}{currencySymbol}</td>
-        <td>{yearData.interest.toFixed(2)}{currencySymbol}</td>
-        <td>{yearData.totalInterest.toFixed(2)}{currencySymbol}</td>
-        <td>{yearData.totalInvested}{currencySymbol}</td>
+        <td>{currencySymbol}{yearData.investmentValue.toFixed(2)}</td>
+        <td>{currencySymbol}{yearData.interest.toFixed(2)}</td>
+        <td>{currencySymbol}{yearData.totalInterest.toFixed(2)}</td>
+        <td>{currencySymbol}{yearData.totalInvested}</td>
         </tr>
     ))}
       </tbody>
