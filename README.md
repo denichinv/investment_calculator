@@ -30,12 +30,12 @@ A React-based web application that helps users calculate potential investment gr
 ### Steps
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/investment-calculator.git
+   git clone https://github.com/denichinv/investment_calculator.git
    ```
 
 2. Install dependencies
    ```bash
-   cd investment-calculator
+   cd investment_calculator
    npm install
    ```
 
