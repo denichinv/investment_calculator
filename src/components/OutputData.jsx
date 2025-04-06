@@ -17,35 +17,39 @@ const OutputData = ({userInput, currency}) => {
         case "GBP":
             currencySymbol = "£"
             break;
-    
-       
     }
-  return (
-    <div>
-      <table id='result'>
-      <thead>
-        <tr>
-            <th>Year</th>
-            <th>Potential Future Balance</th>
-            <th>Interest (Year)</th>
-            <th>Total Interest</th>
-            <th>Initial deposit</th>
-        </tr>
-      </thead>
-      <tbody>
-        {resdata.map((yearData,index) => (
-        <tr key={index}>
-        <td>{yearData.year}</td>
-        <td>{currencySymbol}{yearData.investmentValue.toFixed(2)}</td>
-        <td>{currencySymbol}{yearData.interest.toFixed(2)}</td>
-        <td>{currencySymbol}{yearData.totalInterest.toFixed(2)}</td>
-        <td>{currencySymbol}{yearData.totalInvested}</td>
-        </tr>
-    ))}
-      </tbody>
-      </table>
-    </div>
-  )
+    
+    // Format numbers with commas for thousands
+    const formatNumber = (num) => {
+        return num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    
+    return (
+        <div>
+            <table id='result'>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Future Balance</th>
+                        <th>Interest (Year)</th>
+                        <th>Total Interest</th>
+                        <th>Invested Capital</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {resdata.map((yearData, index) => (
+                        <tr key={index}>
+                            <td>{yearData.year}</td>
+                            <td>{currencySymbol}{formatNumber(yearData.investmentValue)}</td>
+                            <td>{currencySymbol}{formatNumber(yearData.interest)}</td>
+                            <td>{currencySymbol}{formatNumber(yearData.totalInterest)}</td>
+                            <td>{currencySymbol}{formatNumber(yearData.totalInvested)}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    )
 }
 
 export default OutputData
