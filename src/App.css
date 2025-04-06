@@ -1,20 +1,29 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 2rem;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 768px) {
   .calculator-container {
-    display: flex;
-    gap: 0rem;
-    justify-content: center;
-    margin-top: 5rem;
+    flex-direction: row;
+    align-items: flex-start;
   }
+}

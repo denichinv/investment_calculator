@@ -2,22 +2,35 @@
   text-align: center;
   max-width: 40rem;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #header img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
-  h1 {
-    font-family: monospace;
 
-    margin: 0.5rem 0;
-    font-size: 30px; 
-    letter-spacing: 1px;
-    font-weight: 800;
-    text-align: center;
-  }
-  #header hr {
-    margin: 0.5rem 0;
+h1 {
+  font-family: monospace;
+  margin: 0.5rem 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  text-align: center;
+}
+
+#header hr {
+  margin: 0.5rem 0;
+}
+
+/* Media query for tablets and larger */
+@media screen and (min-width: 768px) {
+  #header img {
+    width: 3rem;
+    height: 3rem;
   }
   
+  h1 {
+    font-size: 30px;
+  }
+}
