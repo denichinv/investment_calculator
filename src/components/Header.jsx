@@ -6,9 +6,9 @@ const Header = ({logo}) => {
   return (
     <header id="header">
       <img src={logo} alt="Investment Calculator Logo" />
-      <hr />
-      <h1>Investment <br></br> Calculator</h1>
-      <hr />
+    
+      <h1>Investment Calculator</h1>
+      
       
     </header>
   )

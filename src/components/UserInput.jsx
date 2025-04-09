@@ -15,13 +15,15 @@ const UserInput = ({userInput,error,currency,handleChange,handleCurrencyChange, 
         <section id="user-input">
             <div>
                 <div className='currency-switcher' >
-                    <label>Currency:</label>
+                    <label>Currency</label>
                     <select  value={currency} onChange={(e) => handleCurrencyChange(e.target.value)}>
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
                     </select>
+                    
                 </div>
+                <hr /> <br />
                 <p className="input-group">
                     <label>Your Initial Investment ({currency})</label>
                     <input
