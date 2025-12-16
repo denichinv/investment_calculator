@@ -1,58 +1,77 @@
-# Investment Calculator 💰
+# Investment Calculator
+
+**Live Demo:** [https://investment-calculator-v.netlify.app/](https://investment-calculator-v.netlify.app/)
 
 ## Overview
-A React-based web application that helps users calculate potential investment growth over time, supporting multiple currencies and providing detailed year-by-year projections.
+
+An interactive **investment calculator** built with React that helps users estimate the future value of their investments based on initial capital, monthly contributions, interest rate, and investment duration.
+
+The application recalculates results instantly as inputs change, providing clear and immediate feedback.
 
 ## Features
-- Calculate investment potential with interactive inputs
-- Multi-currency support (USD, EUR, GBP)
-- Dynamic calculation of future balance, interest, and total investment
-- Real-time input validation
-- Responsive design
 
-## Technologies Used
-- React
-- JavaScript
-- CSS
-- PropTypes for type checking
+* Calculate future investment value
+* Adjustable initial investment amount
+* Monthly contribution input
+* Configurable annual interest rate
+* Custom investment duration (years)
+* Real-time calculation updates
+* Clean and responsive UI
+
+## Tech Stack
+
+* React
+* JavaScript
+* CSS
+* Vite
 
 ## Screenshots
 ![Initial View](/screenshots/initial-view.png)
 
+## Getting Started
 
+Follow the steps below to run the project locally.
 
-## Installation
+1. **Clone the repository**
 
-### Prerequisites
-- Node.js
-- npm
-
-### Steps
-1. Clone the repository
    ```bash
    git clone https://github.com/denichinv/investment_calculator.git
    ```
 
-2. Install dependencies
+2. **Navigate into the project directory**
+
    ```bash
    cd investment_calculator
+   ```
+
+3. **Install dependencies**
+
+   ```bash
    npm install
    ```
 
-3. Run the application
+4. **Start the development server**
+
    ```bash
    npm start
    ```
 
-## How to Use
-1. Enter your initial investment amount
-2. Set annual investment contribution
-3. Specify expected annual return rate
-4. Choose investment duration
-5. Select your preferred currency
-6. View detailed year-by-year investment breakdown
+The application will run at `http://localhost:3000`.
+
+## Usage
+
+1. Enter the initial investment amount
+2. Set your monthly contribution
+3. Adjust the annual interest rate
+4. Select the investment duration in years
+5. View the calculated future value instantly
 
 ## Customization
-- Modify `currencyRates` in `App.jsx` to update currency conversion rates
-- Adjust initial default values in `useState` for different starting points
 
+You can modify the calculation logic inside the investment calculation utility or component. Styling can be updated via the main CSS files.
+
+## About
+
+This project was built to practice React fundamentals, controlled inputs, state management, and basic financial calculations.
+
+**Live Demo:** [https://investment-calculator-v.netlify.app/](https://investment-calculator-v.netlify.app/)
